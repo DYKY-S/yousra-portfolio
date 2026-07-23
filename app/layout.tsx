@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
+import { GoogleTag } from '@next/third-parties/google'
 
 const bricolage = Bricolage_Grotesque({
   variable: "--ff-display",
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${bricolage.variable} ${inter.variable}`}>
         {children}
+         <GoogleTag gaId="GT-PBSRWW9K" />
       </body>
     </html>
   );
